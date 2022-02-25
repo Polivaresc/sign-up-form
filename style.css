@@ -10,26 +10,141 @@ body {
     font-family: var(--body-font);
 }
 
+input, button {
+    font-family: var(--body-font);
+}
+
 .content {
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
 
-img[alt^='Plant'] {
+.logo-side {
     position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.logo-side>img {
+    height: 100%;
+}
+
+.logo, .author {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    width: 100%;
+}
+
+.author {
+    bottom: 1rem;
+    text-align: center;
+}
+
+.author>span {
+    text-decoration: underline;
 }
 
 .logo {
     font-family: var(--logo-font);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 20px 0;
+    top: 10rem;
 }
 
-.top-img {
-    position: absolute;
-    z-index: 1;
-    top: 30px;
+.logo>img {
+    height: 10rem;
+}
+
+.logo>span {
+    font-size: 5rem;
+}
+
+.form-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+.quote {
+    font-size: x-large;
+    font-weight: 800;
+    line-height: 2.5rem;
+    padding: 5rem 3rem 3rem;
+    background-color: rgb(248, 248, 248);
+}
+
+.form-elements, .form-side>div, h2 {
+    padding-left: 3rem;
+}
+
+button {
+    margin: 3rem;
+    border: none;
+    background-color: rgb(92, 161, 132);
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: 15px 50px;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(57, 112, 89);
+}
+
+.form-elements {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    box-shadow: 5px 5px 5px rgb(224, 223, 223);
+    padding-bottom: 2rem;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5rem 1rem 0;
+    width: 15rem;
+}
+
+input {
+    outline: none;
+    border: 1px solid rgb(224, 223, 223);
+    border-radius: 5px;
+    padding: 7px;
+    appearance: none;
+}
+
+input:focus {
+    border-color: rgb(75, 75, 238);
+    box-shadow: 3px 3px 3px rgb(211, 210, 210);
+}
+
+input:invalid {
+    border-color: rgb(189, 54, 54);
+}
+
+.error {
+    display: none;
+    color: rgb(189, 54, 54);
+    font-size: small;
+}
+
+.form-input>label {
+    font-size: small;
+    font-weight: bold;
+}
+
+.form-side>div>span {
+    color: rgb(92, 161, 132);
+    font-weight: bold;
+}
+
+.form-side>div>span:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
