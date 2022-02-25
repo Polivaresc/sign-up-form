@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Rubik:wght@300&display=swap');
+
+:root {
+    --logo-font: 'Bungee Inline', cursive;
+    --body-font: 'Rubik', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+img[alt^='Plant'] {
+    position: relative;
+}
+
+.logo {
+    font-family: var(--logo-font);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.top-img {
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
